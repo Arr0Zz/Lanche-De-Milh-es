@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanche de Milhões - Transforme sua Cozinha em Fonte de Renda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E63946',
+                        secondary: '#F4A261',
+                        accent: '#E76F51',
+                        light: '#F8EDEB',
+                        dark: '#2B2D42'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #E63946 0%, #F4A261 100%);
+        }
+        .benefit-card {
+            transition: transform 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        .social-proof-item {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-light text-dark">
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-12 md:py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Transforme sua Cozinha em uma Fonte de Renda</h1>
+                    <p class="text-xl md:text-2xl mb-8">Descubra como faturar até R$150 por dia com lanches simples e caseiros, começando com menos de R$100!</p>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-xl text-dark mb-8">
+                        <h3 class="text-xl font-bold mb-2 text-primary">Oferta Especial de Lançamento!</h3>
+                        <p class="mb-4">De <span class="line-through">R$97</span> por apenas:</p>
+                        <div class="flex items-end">
+                            <span class="text-4xl font-bold text-accent">R$27</span>
+                            <span class="ml-2 text-gray-600">(apenas para os primeiros 50 compradores)</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#oferta" class="pulse inline-block bg-accent hover:bg-secondary text-white font-bold py-4 px-8 rounded-full text-xl shadow-lg transform transition duration-300 hover:scale-105">
+                        SIM, QUERO COMEÇAR MEU NEGÓCIO HOJE!
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Deliciosos lanches caseiros" class="rounded-xl shadow-2xl w-full max-w-md">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                            <div class="flex items-center">
+                                <div class="bg-primary text-white p-3 rounded-full mr-3">
+                                    <i class="fas fa-book text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-bold">eBook Digital</p>
+                                    <p class="text-sm">Entregue imediatamente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Por que milhares estão começando seu próprio negócio de lanches?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="benefit-card bg-light rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-wallet text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Baixo Investimento</h3>
+                    </div>
+                    <p>Comece com menos de R$100! Você não precisa de muito dinheiro para iniciar seu negócio de sucesso.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="benefit-card bg-light rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-secondary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-bolt text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Comece Hoje Mesmo</h3>
+                    </div>
+                    <p>Com nosso método passo a passo, você pode começar a vender seus primeiros lanches ainda hoje!</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="benefit-card bg-light rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-user-secret text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Sem Aparecer</h3>
+                    </div>
+                    <p>Trabalhe discretamente de casa sem precisar aparecer em fotos ou vídeos.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="benefit-card bg-light rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-utensils text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Sem Experiência</h3>
+                    </div>
+                    <p>Não sabe cozinhar? Não tem problema! Nossas receitas são simples e qualquer pessoa pode fazer.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="benefit-card bg-light rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-secondary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Retorno Rápido</h3>
+                    </div>
+                    <p>Veja resultados já nos primeiros dias! Muitos alunos recuperam o investimento na primeira semana.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="benefit-card bg-light rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-box text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Tudo Pronto</h3>
+                    </div>
+                    <p>Receba estratégias prontas de vendas, modelos de anúncios e tudo que precisa para começar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">O que você vai receber no eBook?</h2>
+            <p class="text-center text-xl mb-16">Tudo que você precisa para começar seu negócio de lanches hoje mesmo!</p>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Conteúdo do eBook" class="rounded-xl shadow-xl w-full">
+                </div>
+                
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                            <div class="bg-primary text-white p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-book-open text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">eBook Digital Completo</h3>
+                                <p>Mais de 100 páginas com receitas que vendem, técnicas de preparo e embalagem profissional.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-secondary text-white p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-bullhorn text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Passo a Passo de Vendas</h3>
+                                <p>Aprenda como anunciar, onde vender e como conquistar clientes fiéis mesmo começando do zero.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-accent text-white p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-calculator text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Cálculo de Custo e Lucro</h3>
+                                <p>Planilhas prontas para você calcular exatamente quanto vai gastar e quanto vai lucrar em cada venda.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-primary text-white p-3 rounded-full mr-4 mt-1">
+                                <i class="fas fa-clipboard-list text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Checklist para Começar</h3>
+                                <p>Um guia passo a passo com tudo que você precisa fazer para começar a vender amanhã mesmo!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#oferta" class="inline-block bg-primary hover:bg-secondary text-white font-bold py-3 px-6 rounded-full shadow-md transform transition duration-300 hover:scale-105">
+                        QUERO MEU EBOOK AGORA!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonuses Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Bônus Exclusivos</h2>
+            <p class="text-center text-xl mb-16">Compre agora e receba estes bônus GRATUITAMENTE!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Bonus 1 -->
+                <div class="bg-gradient-to-br from-secondary to-accent rounded-xl p-6 text-white shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white text-primary p-3 rounded-full mr-4">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Modelos de Mensagens para WhatsApp</h3>
+                    </div>
+                    <p>Mensagens prontas para enviar para clientes, grupos e comunidades. Copie, cole e venda!</p>
+                </div>
+                
+                <!-- Bonus 2 -->
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 text-white shadow-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white text-primary p-3 rounded-full mr-4">
+                            <i class="fas fa-tags text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Guia de Promoções Irresistíveis</h3>
+                    </div>
+                    <p>Aprenda a criar ofertas que fazem seus clientes comprarem imediatamente e voltarem sempre!</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-yellow-50 border-2 border-yellow-300 rounded-xl p-6 max-w-4xl mx-auto">
+                <div class="flex items-center">
+                    <div class="bg-yellow-500 text-white p-3 rounded-full mr-4">
+                        <i class="fas fa-gift text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-yellow-800">Oferta por Tempo Limitado!</h3>
+                        <p class="text-yellow-700">Estes bônus estão disponíveis apenas para os primeiros 50 compradores. Não perca essa oportunidade!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">O que dizem quem já começou</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="social-proof-item bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Comecei com R$50!</h3>
+                    </div>
+                    <p class="italic">"Comprei os ingredientes com apenas R$50 e vendi tudo no mesmo dia! Fiz R$120 de lucro no primeiro dia. Incrível!"</p>
+                </div>
+                
+                <div class="social-proof-item bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-secondary text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Sucesso no bairro!</h3>
+                    </div>
+                    <p class="italic">"Meus lanches viraram febre no grupo do bairro! Em uma semana já tinha clientes fixos e pedidos todos os dias."</p>
+                </div>
+                
+                <div class="social-proof-item bg-white rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent text-white p-3 rounded-full mr-4">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">R$100 em 2 dias!</h3>
+                    </div>
+                    <p class="italic">"Seguindo o método do eBook, fiz meus primeiros R$100 de lucro em apenas 2 dias! Simples e direto ao ponto."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urgency Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-accent text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Oferta por Tempo Limitado!</h2>
+            <p class="text-xl mb-8">Apenas R$27 para os primeiros 50 compradores!</p>
+            
+            <div class="flex justify-center mb-8">
+                <div class="bg-white text-primary font-bold py-2 px-6 rounded-full text-xl inline-block">
+                    <i class="fas fa-stopwatch mr-2"></i> Oferta expira em: 
+                    <span id="countdown" class="ml-2">05:00</span>
+                </div>
+            </div>
+            
+            <p class="text-lg mb-8">Depois dessa promoção, o preço volta para R$97. Não perca essa chance!</p>
+            
+            <a href="#oferta" class="pulse inline-block bg-white text-primary font-bold py-4 px-8 rounded-full text-xl shadow-lg transform transition duration-300 hover:scale-105">
+                QUERO APROVEITAR A PROMOÇÃO!
+            </a>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section id="oferta" class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Resumo da Oferta</h2>
+                <p class="text-xl">Tudo que você precisa para começar a ganhar dinheiro com lanches caseiros</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-light rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-4 text-center">Você Receberá:</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>eBook Digital "Lanche de Milhões" (100+ páginas)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Passo a passo completo para começar a vender</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Planilhas de custo e lucro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Checklist para começar amanhã</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Modelos de mensagens para WhatsApp</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <span>Guia de promoções irresistíveis</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-8 text-white text-center">
+                    <div class="mb-6">
+                        <p class="text-2xl font-bold">Oferta Especial</p>
+                        <p class="line-through text-xl mb-2">De R$97</p>
+                        <p class="text-4xl font-bold mb-2">R$27</p>
+                        <p class="text-sm">(apenas para os primeiros 50 compradores)</p>
+                    </div>
+                    
+                    <a href="#" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full shadow-lg mb-4 w-full transform transition duration-300 hover:scale-105">
+                        SIM, QUERO COMEÇAR AGORA!
+                    </a>
+                    
+                    <div class="flex justify-center mb-4">
+                        <img src="https://via.placeholder.com/200x60?text=Pagamento+Seguro" alt="Métodos de pagamento" class="h-10">
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-2xl mr-3"></i>
+                            <p class="text-sm">Compra 100% segura | Entrega imediata</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Guarantee -->
+            <div class="bg-yellow-50 border-2 border-yellow-200 rounded-xl p-6 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="bg-yellow-500 text-white p-3 rounded-full mb-4">
+                        <i class="fas fa-lock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Garantia Incondicional de 7 Dias</h3>
+                    <p class="mb-4">Se por qualquer motivo você não gostar do conteúdo, basta nos enviar um e-mail dentro de 7 dias e devolveremos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                    <p class="font-bold">Você não tem nada a perder e tudo a ganhar!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Preciso ter experiência na cozinha?</h3>
+                    <p>Não! O eBook foi desenvolvido para pessoas sem qualquer experiência culinária. As receitas são simples, com ingredientes fáceis de encontrar e passo a passo detalhado.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Quanto preciso investir para começar?</h3>
+                    <p>Você pode começar com menos de R$100! Muitos alunos começaram com apenas R$50 em ingredientes e já obtiveram lucro no primeiro dia.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Como recebo o eBook?</h3>
+                    <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do eBook e todos os bônus. O acesso é vitalício!</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md">
+                    <h3 class="text-xl font-bold mb-2">E se eu não gostar do conteúdo?</h3>
+                    <p>Oferecemos uma garantia incondicional de 7 dias. Se você não ficar satisfeito, basta nos enviar um e-mail e devolveremos 100% do seu dinheiro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p>Produto digital entregue por e-mail. Pagamento 100% seguro.</p>
+            <p class="mt-2">© 2023 Lanche de Milhões. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta bg-primary py-4 px-4 shadow-lg hidden md:block">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <p class="text-white font-bold text-xl">Aproveite a promoção de lançamento!</p>
+                <p class="text-white">De R$97 por apenas R$27 (oferta por tempo limitado)</p>
+            </div>
+            <a href="#oferta" class="bg-white text-primary font-bold py-3 px-8 rounded-full shadow-md transform transition duration-300 hover:scale-105">
+                QUERO MEU EBOOK AGORA!
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const fiveMinutes = 60 * 5;
+            const display = document.querySelector('#countdown');
+            startTimer(fiveMinutes, display);
+            
+            // Show sticky CTA when scrolling
+            window.addEventListener('scroll', function() {
+                const stickyCta = document.querySelector('.sticky-cta');
+                if (window.scrollY > 500) {
+                    stickyCta.classList.remove('hidden');
+                } else {
+                    stickyCta.classList.add('hidden');
+                }
+            });
+        };
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=gjs25k/lanche-de-milh-es" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
