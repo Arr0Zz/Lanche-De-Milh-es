@@ -1,28 +1,183 @@
+/* Lanche de Milhões - Estilos Complementares */
+
+/* Cores principais conforme especificado */
+:root {
+    --primary-red: #E63946;
+    --secondary-orange: #F4A261;
+    --accent-orange: #E76F51;
+    --light-bg: #F8EDEB;
+    --dark-text: #2B2D42;
+    --yellow-accent: #FFD60A;
+}
+
+/* Fonte suave e legível */
 body {
-	padding: 2rem;
-	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
 }
 
-h1 {
-	font-size: 16px;
-	margin-top: 0;
+/* Gradiente de fundo para hero */
+.hero-bg {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-orange) 100%);
 }
 
-p {
-	color: rgb(107, 114, 128);
-	font-size: 15px;
-	margin-bottom: 10px;
-	margin-top: 5px;
+/* Animações sutis para CTAs */
+.pulse {
+    animation: pulse 2s infinite;
 }
 
-.card {
-	max-width: 620px;
-	margin: 0 auto;
-	padding: 16px;
-	border: 1px solid lightgray;
-	border-radius: 16px;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
-.card p:last-child {
-	margin-bottom: 0;
+/* Hover effects para cards */
+.benefit-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animação para depoimentos */
+.social-proof-item {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Botões com estilo aprimorado */
+.cta-button {
+    background: linear-gradient(45deg, var(--primary-red), var(--accent-orange));
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+}
+
+/* Sticky CTA fixo */
+.sticky-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--primary-red);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade aprimorada */
+@media (max-width: 768px) {
+    .hero-bg h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-bg p {
+        font-size: 1.1rem;
+    }
+    
+    .sticky-cta {
+        padding: 1rem;
+    }
+    
+    .sticky-cta .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Efeitos visuais para seções importantes */
+.guarantee-section {
+    background: linear-gradient(135deg, #FFD60A 0%, #FFC300 100%);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.urgency-section {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-orange) 100%);
+    color: white;
+}
+
+/* Ícones com animação sutil */
+.icon-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Melhorias para acessibilidade */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Foco para navegação por teclado */
+a:focus, button:focus {
+    outline: 2px solid var(--primary-red);
+    outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Otimizações para performance */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para countdown timer */
+#countdown {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    color: var(--primary-red);
+}
+
