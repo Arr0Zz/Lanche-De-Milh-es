@@ -181,3 +181,23 @@ img {
     color: var(--primary-red);
 }
 
+
+
+/* Estilos adicionais para rolagem lateral na seção de feedback */
+.social-proof-scroll-container {
+    -webkit-overflow-scrolling: touch; /* Para rolagem mais suave em iOS */
+}
+
+.social-proof-item {
+    scroll-snap-align: start;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 768px) {
+    .social-proof-scroll-container {
+        padding-left: 1rem; /* Adiciona um pouco de padding no início para melhor visualização */
+        padding-right: 1rem; /* Adiciona um pouco de padding no final */
+    }
+}
+
+
